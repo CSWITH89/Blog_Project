@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import { Link, StaticQuery, graphql } from 'gatsby'
+import {StaticQuery, graphql } from 'gatsby'
 
 
 const IndexPage = (data) => (
@@ -37,21 +37,13 @@ const IndexPage = (data) => (
     }
   }
   `}
-  render= {
-    (
-      {
-    allContentfulBlogPost: {
-      title,
-      date
-      
-    }
-
-  }) => (
+  render= { 
+    (data) => (
 
     <Fragment>
 
-    <h1>{title}</h1>
-    <small>Created on {date}</small>
+    <h1>{name}</h1>
+    <p>Created on {date}</p>
     </Fragment>
   )}
  />
